@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Tareita56.Models.Vehiculos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <h1>Vehiculos</h1>
+    
+    <link href="~/materialize/css/tabla.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <div>
+        
+        <a asp-action="Create" id="icon" class="waves-effect waves-light btn">+</a>
+    </div>
+
+    <table id="customers">
+        <thead>
+
+            <tr>
+                
+                <th>
+                    @Html.DisplayNameFor(model => model.Marca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Modelo)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Placa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Year)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaRetencion)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.NombreConductor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cedula)
+                </th>
+                <th>
+                    Opciones
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Marca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Modelo)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Placa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaRetencion)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreConductor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cedula)
+                    </td>
+
+                    <td>
+
+                        <a asp-action="Details" class="material-icons" id="info" asp-route-id="@item.VehiculosID">info</a> |
+                        <a asp-action="Delete" class="material-icons" id="delete" asp-route-id="@item.VehiculosID">delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

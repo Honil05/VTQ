@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Tareita56.Models.Historico>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Historico</h1>
+
+<link href="~/materialize/css/tabla.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.H_Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_Placa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_FechaRetencion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_FechaSalida)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.H_NombreConductor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_Cedula)
+            </th>
+            <th>Opcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.H_Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.H_Modelo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.H_Placa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.H_Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.H_FechaRetencion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.H_FechaSalida)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.H_NombreConductor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.H_Cedula)
+                </td>
+
+                <td>
+
+                    <a asp-action="Details" id="info" class="material-icons" asp-route-id="@item.HistoricoID">info</a> |
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

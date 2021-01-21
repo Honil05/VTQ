@@ -1,0 +1,99 @@
+﻿@model Tareita56.Models.Historico
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Historico</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="HistoricoID" />
+            <div class="form-group">
+                <label asp-for="H_Chasis" class="control-label"></label>
+                <input asp-for="H_Chasis" class="form-control" />
+                <span asp-validation-for="H_Chasis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Marca" class="control-label"></label>
+                <input asp-for="H_Marca" class="form-control" />
+                <span asp-validation-for="H_Marca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Modelo" class="control-label"></label>
+                <input asp-for="H_Modelo" class="form-control" />
+                <span asp-validation-for="H_Modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Color" class="control-label"></label>
+                <input asp-for="H_Color" class="form-control" />
+                <span asp-validation-for="H_Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Placa" class="control-label"></label>
+                <input asp-for="H_Placa" class="form-control" />
+                <span asp-validation-for="H_Placa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Year" class="control-label"></label>
+                <input asp-for="H_Year" class="form-control" />
+                <span asp-validation-for="H_Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_FechaRetencion" class="control-label"></label>
+                <input asp-for="H_FechaRetencion" class="form-control" />
+                <span asp-validation-for="H_FechaRetencion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_FechaSalida" class="control-label"></label>
+                <input asp-for="H_FechaSalida" class="form-control" />
+                <span asp-validation-for="H_FechaSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Lugar" class="control-label"></label>
+                <input asp-for="H_Lugar" class="form-control" />
+                <span asp-validation-for="H_Lugar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Lat" class="control-label"></label>
+                <input asp-for="H_Lat" class="form-control" />
+                <span asp-validation-for="H_Lat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Long" class="control-label"></label>
+                <input asp-for="H_Long" class="form-control" />
+                <span asp-validation-for="H_Long" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_NombreConductor" class="control-label"></label>
+                <input asp-for="H_NombreConductor" class="form-control" />
+                <span asp-validation-for="H_NombreConductor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Cedula" class="control-label"></label>
+                <input asp-for="H_Cedula" class="form-control" />
+                <span asp-validation-for="H_Cedula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_Comentarios" class="control-label"></label>
+                <input asp-for="H_Comentarios" class="form-control" />
+                <span asp-validation-for="H_Comentarios" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

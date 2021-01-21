@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tareita56</title>
+    <link rel="stylesheet" href="~/materialize/css/materialize.min.css" />
+    <link href="~/materialize/css/Home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+
+            <nav class="nav-extended">
+                <div class="nav-wrapper">
+                  
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="brand-logo">VTQ </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <partial name="_LoginPartial" />
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a asp-area="" asp-controller="Vehiculos" asp-action="Index">Vehiculos</a></li>
+                        <li class="tab"><a asp-area="" asp-controller="Historico" asp-action="Index">Liberados</a></li>
+                  
+                    </ul>
+                </div>
+            </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/materialize/js/materialize.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
